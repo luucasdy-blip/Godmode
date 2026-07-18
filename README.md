@@ -5,7 +5,7 @@ local Library = require(ReplicatedStorage:WaitForChild("Lib"))
 local LocalPlayer = Players.LocalPlayer
 
 local function keepSanityFull()
-	LocalPlayer:SetAttribute("Sanity", %nan%)
+	LocalPlayer:SetAttribute("Sanity", 100)
 end
 Library.Inject("PlayerLostSanity", keepSanityFull)
 LocalPlayer:GetAttributeChangedSignal("Sanity"):Connect(keepSanityFull)
